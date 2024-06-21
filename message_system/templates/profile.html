@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+</head>
+<body>
+  <h1>Welcome, {{ user.username }}</h1>
+  <a href="{{ url_for('send_message') }}">Send a Message</a>
+  <a href="{{ url_for('dashboard') }}">Inbox</a>
+  <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+</head>
+<body>
+  <h1>Dashboard</h1>
+  <h2>Sent Messages</h2>
+  <ul>
+    {% for message in messages_sent %}
+      <li>To: {{ message.receiver.username }} - {{ message.body }} at {{ message.timestamp }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>Received Messages</h2>
+  <ul>
+    {% for message in messages_received %}
+      <li>From: {{ message.sender.username }} - {{ message.body }} at {{ message.timestamp }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
